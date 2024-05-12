@@ -48,6 +48,7 @@ extern "C" {
             target_os = "fuchsia",
             target_os = "l4re",
             target_os = "hurd",
+            target_os = "cykusz",
         ),
         link_name = "__errno_location"
     )]
@@ -488,6 +489,12 @@ pub fn current_exe() -> io::Result<PathBuf> {
 }
 
 #[cfg(target_os = "l4re")]
+pub fn current_exe() -> io::Result<PathBuf> {
+    use crate::io::ErrorKind;
+    Err(io::const_io_error!(ErrorKind::Unsupported, "Not yet implemented!"))
+}
+
+#[cfg(target_os = "cykusz")]
 pub fn current_exe() -> io::Result<PathBuf> {
     use crate::io::ErrorKind;
     Err(io::const_io_error!(ErrorKind::Unsupported, "Not yet implemented!"))

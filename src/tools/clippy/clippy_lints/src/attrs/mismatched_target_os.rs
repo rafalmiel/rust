@@ -7,6 +7,7 @@ use rustc_span::{sym, Span};
 
 static UNIX_SYSTEMS: &[&str] = &[
     "android",
+    "cykusz",
     "dragonfly",
     "emscripten",
     "freebsd",
