@@ -161,6 +161,10 @@ extern "C" {}
 #[link(name = "gcc_s")]
 extern "C" {}
 
+#[cfg(target_os = "cykusz")]
+#[link(name = "gcc_s")]
+extern "C" {}
+
 #[cfg(target_os = "aix")]
 #[link(name = "unwind")]
 extern "C" {}

@@ -171,6 +171,7 @@ static TARGETS: &[&str] = &[
     "x86_64-unknown-linux-ohos",
     "x86_64-unknown-netbsd",
     "x86_64-unknown-none",
+    "x86_64-unknown-cykusz",
     "x86_64-unknown-redox",
     "x86_64-unknown-hermit",
     "x86_64-unknown-uefi",

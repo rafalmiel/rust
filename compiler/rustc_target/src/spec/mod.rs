@@ -1601,6 +1601,8 @@ supported_targets! {
     ("x86_64-fuchsia", x86_64_fuchsia),
     ("x86_64-unknown-fuchsia", x86_64_unknown_fuchsia),
 
+    ("x86_64-unknown-cykusz", x86_64_unknown_cykusz),
+
     ("avr-unknown-gnu-atmega328", avr_unknown_gnu_atmega328),
 
     ("x86_64-unknown-l4re-uclibc", x86_64_unknown_l4re_uclibc),
