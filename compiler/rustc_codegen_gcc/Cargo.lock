@@ -391,3 +391,8 @@ checksum = "6f42320e61fe2cfd34354ecb597f86f413484a798ba44a8ca1165c58d42da6c1"
 dependencies = [
  "bitflags",
 ]
+
+[[patch.unused]]
+name = "libc"
+version = "0.2.175"
+source = "git+https://github.com/rafalmiel/libc.git?branch=cykusz#adfd6733745d77025108d58e69f8c02fc954e493"

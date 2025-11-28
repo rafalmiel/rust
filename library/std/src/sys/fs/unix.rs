@@ -988,6 +988,7 @@ impl DirEntry {
         target_os = "nto",
         target_os = "hurd",
         target_os = "rtems",
+        target_os = "cykusz",
         target_vendor = "apple",
     ))]
     pub fn ino(&self) -> u64 {

@@ -197,6 +197,7 @@ static TARGETS: &[&str] = &[
     "x86_64-unknown-hermit",
     "x86_64-unknown-uefi",
     "x86_64-unknown-managarm-mlibc",
+    "x86_64-unknown-cykusz",
 ];
 
 /// This allows the manifest to contain rust-docs for hosts that don't build

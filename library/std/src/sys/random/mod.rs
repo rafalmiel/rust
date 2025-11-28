@@ -53,6 +53,7 @@ cfg_select! {
         target_os = "aix",
         target_os = "hurd",
         target_os = "l4re",
+        target_os = "cykusz",
         target_os = "nto",
     ) => {
         mod unix_legacy;

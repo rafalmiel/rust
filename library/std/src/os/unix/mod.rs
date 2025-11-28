@@ -43,6 +43,8 @@ mod platform {
     pub use crate::os::android::*;
     #[cfg(target_os = "cygwin")]
     pub use crate::os::cygwin::*;
+    #[cfg(target_os = "cykusz")]
+    pub use crate::os::cykusz::*;
     #[cfg(target_vendor = "apple")]
     pub use crate::os::darwin::*;
     #[cfg(target_os = "dragonfly")]

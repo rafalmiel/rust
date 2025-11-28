@@ -350,7 +350,7 @@ pub fn current_os_id() -> Option<u64> {
             let id: libc::pid_t = unsafe { gettid() };
             Some(id as u64)
         }
-        target_os = "nto" => {
+        any(target_os = "nto", target_os = "cykusz") => {
             // SAFETY: FFI call with no preconditions.
             let id: libc::pid_t = unsafe { libc::gettid() };
             Some(id as u64)
@@ -399,6 +399,7 @@ pub fn current_os_id() -> Option<u64> {
     target_os = "illumos",
     target_os = "vxworks",
     target_os = "cygwin",
+    target_os = "cykusz",
     target_vendor = "apple",
 ))]
 fn truncate_cstr<const MAX_WITH_NUL: usize>(cstr: &CStr) -> [libc::c_char; MAX_WITH_NUL] {
@@ -430,7 +431,8 @@ pub fn set_name(name: &CStr) {
     target_os = "freebsd",
     target_os = "dragonfly",
     target_os = "nuttx",
-    target_os = "cygwin"
+    target_os = "cygwin",
+    target_os = "cykusz",
 ))]
 pub fn set_name(name: &CStr) {
     unsafe {
@@ -599,6 +601,7 @@ pub fn sleep(dur: Duration) {
     target_os = "hurd",
     target_os = "fuchsia",
     target_os = "vxworks",
+    target_os = "cykusz",
 ))]
 pub fn sleep_until(deadline: crate::time::Instant) {
     use crate::time::Instant;

@@ -3325,3 +3325,8 @@ dependencies = [
  "memchr",
  "time",
 ]
+
+[[patch.unused]]
+name = "libc"
+version = "0.2.175"
+source = "git+https://github.com/rafalmiel/libc.git?branch=cykusz#adfd6733745d77025108d58e69f8c02fc954e493"
