@@ -27,6 +27,7 @@ unsafe extern "C" {
             target_os = "fuchsia",
             target_os = "l4re",
             target_os = "hurd",
+            target_os = "cykusz",
         ),
         link_name = "__errno_location"
     )]
@@ -481,6 +482,12 @@ pub fn current_exe() -> io::Result<PathBuf> {
 #[cfg(target_os = "rtems")]
 pub fn current_exe() -> io::Result<PathBuf> {
     crate::fs::read_to_string("sys:exe").map(PathBuf::from)
+}
+
+#[cfg(target_os = "cykusz")]
+pub fn current_exe() -> io::Result<PathBuf> {
+    use crate::io::ErrorKind;
+    Err(io::const_error!(ErrorKind::Unsupported, "not yet implemented!"))
 }
 
 #[cfg(target_os = "l4re")]

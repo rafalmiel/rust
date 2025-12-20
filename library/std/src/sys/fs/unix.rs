@@ -999,6 +999,7 @@ impl DirEntry {
         target_os = "solaris",
         target_os = "vita",
         target_os = "vxworks",
+        target_os = "cykusz",
         target_vendor = "apple",
     ))]
     pub fn ino(&self) -> u64 {

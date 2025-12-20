@@ -127,6 +127,8 @@ pub mod aix;
 pub mod android;
 #[cfg(target_os = "cygwin")]
 pub mod cygwin;
+#[cfg(target_os = "cykusz")]
+pub mod cykusz;
 #[cfg(target_os = "dragonfly")]
 pub mod dragonfly;
 #[cfg(target_os = "emscripten")]

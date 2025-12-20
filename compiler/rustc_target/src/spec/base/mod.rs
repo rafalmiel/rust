@@ -4,6 +4,7 @@ pub mod apple;
 pub(crate) mod avr;
 pub(crate) mod bpf;
 pub(crate) mod cygwin;
+pub(crate) mod cykusz;
 pub(crate) mod dragonfly;
 pub(crate) mod freebsd;
 pub(crate) mod fuchsia;
